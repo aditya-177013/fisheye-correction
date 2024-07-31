@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-image = cv2.imread('test2.png')
+image = cv2.imread('test1.png')
 
 h, w = image.shape[:2]
 t=(w+h)//2
@@ -21,7 +21,7 @@ new_width = int(w * ratio)
 new_height = int(h * ratio)
 resized_image = cv2.resize(undistorted_image, (new_width, new_height))
 
-#cv2.imwrite('undistorted_image.jpg', undistorted_image)
+cv2.imwrite('undistorted_image.jpg', undistorted_image)
 cv2.imshow('Undistorted Image', resized_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
